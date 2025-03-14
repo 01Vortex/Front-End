@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 音乐播放器 -->
+<link rel="stylesheet" id='font-awesome-css'
+    href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css" type='text/css' media='all'>
+
+<head>
+    <meta charset="UTF-8">
+    <title>卡片翻转时钟</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<style>
+    body {
+        background-color: black;
+    }
+</style>
+
+<body>
+    <div class="clock">
+        <div class="flip">
+            <div class="digital front" data-number="0"></div>
+            <div class="digital back" data-number="1"></div>
+        </div>
+        <div class="flip">
+            <div class="digital front" data-number="0"></div>
+            <div class="digital back" data-number="1"></div>
+        </div>
+        <em class="divider">:</em>
+        <div class="flip">
+            <div class="digital front" data-number="0"></div>
+            <div class="digital back" data-number="1"></div>
+        </div>
+        <div class="flip">
+            <div class="digital front" data-number="0"></div>
+            <div class="digital back" data-number="1"></div>
+        </div>
+        <em class="divider">:</em>
+        <div class="flip">
+            <div class="digital front" data-number="0"></div>
+            <div class="digital back" data-number="1"></div>
+        </div>
+        <div class="flip">
+            <div class="digital front" data-number="0"></div>
+            <div class="digital back" data-number="1"></div>
+        </div>
+    </div>
+</body>
+<!-- partial -->
+<script src="./script.js"></script>
+
+<!-- 音乐播放器 -->
+<script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+<div id="music" key="65cf938d12fad" api="https://music.lolimi.cn"></div>
+<script id="xplayer" src="https://music.lolimi.cn/Static/player3/js/player.js"></script>
+
+</html>

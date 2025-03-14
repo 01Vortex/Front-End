@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>左边文字右边登录界面</title>
+    <!-- 图标和部分js的在线库 -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />  -->
+    <!-- 自定义CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- #page.site>.container>.login>.hero+.main>form>p*3 -->
+    <div id="page" class="site">
+        <div class="container">
+            <div class="login">
+                <div class="hero">
+                    <h1>登录以 <br>打开新世界</h1>
+                    <p>如果没有账户<br>你可以<a href="./register.html">注册</a></p>
+                </div>
+                <div class="main">
+                    <form action="">
+                        <p>
+                            <input type="text" placeholder="请输入账号">
+                        </p>
+                        <p class="password">
+                            <input type="password" placeholder="输入密码">
+                            <!-- 点击后查看密码键被隐藏 -->
+                            <!-- <i class="ri-eye-off-line"></i> -->
+                            <a href="#">恢复密码</a>
+                        </p>
+                        <p>
+                            <input type="submit" class="submit" value="Sign In">
+                        </p>
+                    </form>
+                    <div class="options">
+                        <div class="separator">
+                            <p>使用其他方式登录</p>
+                        </div>
+                        <!-- ul>li*3>a>i.ri-xxx-fill.ri-2x -->
+                        <ul>
+                            <li><a href="#" title="使用QQ登录"><i class="ri-qq-fill ri-2x"></i></a></li>
+                            <li><a href="#" title="使用微信登录"><i class="ri-wechat-fill ri-2x"></i></a></li>
+                            <li><a href="#" title="使用短信验证码登录"><i class="ri-mail-fill ri-2x"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <style>
+        body {
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(to bottom, #f1f4f9, #dff1ff);
+            position: relative;
+        }
+
+        section .color {
+            position: absolute;
+            filter: blur(15vw);
+        }
+
+        section .color:nth-child(1) {
+            width: 60vw;
+            height: 60vw;
+            top: -35vh;
+            background: #ff359b;
+        }
+
+        section .color:nth-child(2) {
+            width: 50vw;
+            height: 50vw;
+            bottom: -15vh;
+            left: 10vw;
+            background: #fffd87;
+        }
+
+        section .color:nth-child(3) {
+            width: 30vw;
+            height: 30vw;
+            bottom: 5vh;
+            right: 10vw;
+            background: #00d2ff;
+        }
+
+        .box {
+            position: relative;
+        }
+
+        .box .square {
+            position: absolute;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            animation: animate 10s linear infinite;
+            animation-delay: calc(-1s * var(--i));
+        }
+
+        @keyframes animate {
+            0%, 100% {
+                transform: translateY(-4vh);
+            }
+            50% {
+                transform: translateY(4vh);
+            }
+        }
+
+        .box .square:nth-child(1) {
+            top: -5vh;
+            right: -6vw;
+            width: 10vw;
+            height: 10vw;
+        }
+
+        .box .square:nth-child(2) {
+            top: 15vh;
+            left: -10vw;
+            width: 12vw;
+            height: 12vw;
+            z-index: 2;
+        }
+
+        .box .square:nth-child(3) {
+            bottom: 5vh;
+            right: -6vw;
+            width: 8vw;
+            height: 8vw;
+            z-index: 2;
+        }
+
+        .box .square:nth-child(4) {
+            bottom: -8vh;
+            left: 10vw;
+            width: 5vw;
+            height: 5vw;
+        }
+
+        .box .square:nth-child(5) {
+            top: -8vh;
+            left: 14vw;
+            width: 6vw;
+            height: 6vw;
+        }
+
+        .container {
+            position: relative;
+            width: 90%;
+            max-width: 400px;
+            min-height: 40vh;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 2rem;
+        }
+
+        .form {
+            position: relative;
+            width: 100%;
+            padding: 2rem;
+        }
+
+        .form h2 {
+            color: gray;
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .form h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -0.5rem;
+            width: 8rem;
+            height: 0.25rem;
+            background: gray;
+        }
+
+        .form .inputBox {
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .form .inputBox input {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            outline: none;
+            padding: 1rem 2rem;
+            border-radius: 35px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 1rem;
+            letter-spacing: 1px;
+            color: #6cda56;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            box-sizing: border-box;
+        }
+
+        .form .inputBox input::placeholder {
+            color: #6cda56;
+        }
+
+        .form .inputBox input[type="submit"] {
+            background: #fff;
+            color: #666;
+            max-width: 10rem;
+            cursor: pointer;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .forget,
+        .return {
+            margin-top: 0.5rem;
+            color: gray;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .form h2 {
+                font-size: 1.5rem;
+            }
+
+            .form h2::before {
+                width: 6rem;
+            }
+
+            .form .inputBox input {
+                padding: 0.5rem 1rem;
+            }
+
+            .form .inputBox input[type="submit"] {
+                max-width: 8rem;
+            }
+
+            section .color {
+                filter: blur(10vw);
+            }
+
+            section .color:nth-child(1) {
+                width: 80vw;
+                height: 80vw;
+                top: -40vh;
+            }
+
+            section .color:nth-child(2) {
+                width: 60vw;
+                height: 60vw;
+                bottom: -20vh;
+                left: 5vw;
+            }
+
+            section .color:nth-child(3) {
+                width: 40vw;
+                height: 40vw;
+                bottom: 10vh;
+                right: 5vw;
+            }
+
+            .box .square {
+                width: 8vw;
+                height: 8vw;
+            }
+
+            .box .square:nth-child(1) {
+                top: -6vh;
+                right: -8vw;
+            }
+
+            .box .square:nth-child(2) {
+                top: 18vh;
+                left: -12vw;
+            }
+
+            .box .square:nth-child(3) {
+                bottom: 7vh;
+                right: -8vw;
+            }
+
+            .box .square:nth-child(4) {
+                bottom: -10vh;
+                left: 12vw;
+            }
+
+            .box .square:nth-child(5) {
+                top: -10vh;
+                left: 18vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="box">
+            <div class="square" style="--i:0;"></div>
+            <div class="square" style="--i:1;"></div>
+            <div class="square" style="--i:2;"></div>
+            <div class="square" style="--i:3;"></div>
+            <div class="square" style="--i:4;"></div>
+            <div class="container">
+                <div class="form">
+                    <h2> 注 册</h2>
+                    <form action="/register" method="POST">
+                        <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+                        <div class="inputBox">
+                            <input type="text" name="username" placeholder="账号" required>
+                        </div>
+                        <div class="inputBox">
+                            <input type="email" name="email" placeholder="邮箱" required>
+                        </div>
+                        <div class="inputBox">
+                            <input type="password" name="password" placeholder="密码" required>
+                        </div>
+                        <div class="inputBox">
+                            <input type="password" name="confirm_password" placeholder="确认密码" required>
+                        </div>
+                        <div class="inputBox">
+                            <input type="submit" value="注册">
+                        </div>
+                        <p class="return">已有账户?<a href="./login.html" target="_blank">登录</a></p>
+                        <p class="return">返回<a href="./index.html" target="_blank">主页</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

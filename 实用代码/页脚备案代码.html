@@ -1,0 +1,129 @@
+<style>
+    /* 核心样式 */
+    .github-badge {
+    display: inline-block;
+    border-radius: 4px;
+    text-shadow: none;
+    font-size: 13.1px;
+    color: #fff;
+    line-height: 15px;
+    margin-bottom: 5px;
+    font-family: "Open Sans", sans-serif;
+    }
+    .github-badge .badge-subject {
+    display: inline-block;
+    background-color: #4d4d4d;
+    padding: 4px 4px 4px 6px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    font-family: "Open Sans", sans-serif;
+    }
+    .github-badge .badge-value {
+    display: inline-block;
+    padding: 4px 6px 4px 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    font-family: "Open Sans", sans-serif;
+    }
+    .github-badge-big {
+    display: inline-block;
+    border-radius: 6px;
+    text-shadow: none;
+    font-size: 14.1px;
+    color: #fff;
+    line-height: 18px;
+    margin-bottom: 7px;
+    }
+    .github-badge-big .badge-subject {
+    display: inline-block;
+    background-color: #4d4d4d;
+    padding: 4px 4px 4px 6px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    }
+    .github-badge-big .badge-value {
+    display: inline-block;
+    padding: 4px 6px 4px 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    }
+    .bg-orange {
+    background-color: #ec8a64 !important;
+    }
+    .bg-red {
+    background-color: #cb7574 !important;
+    }
+    .bg-apricots {
+    background-color: #f7c280 !important;
+    }
+    .bg-casein {
+    background-color: #dfe291 !important;
+    }
+    .bg-shallots {
+    background-color: #97c3c6 !important;
+    }
+    .bg-ogling {
+    background-color: #95c7e0 !important;
+    }
+    .bg-haze {
+    background-color: #9aaec7 !important;
+    }
+    .bg-mountain-terrier {
+    background-color: #99a5cd !important;
+    }
+    </style>
+
+
+     
+<div class="github-badge-big">
+    <span class="badge-value bg-orange">
+        <!-- 备案链接 -->
+        <a href="https://beian.miit.gov.cn/" target="_blank" one-link-mark="yes" style="font-size: 15px;">桂ICP备1234567890号</a>|
+
+        <a href="https://www.beian.gov.cn/portal/index?token=e547b70c-fbe1-4c80-a4a2-857b17389a71" target="_blank" one-link-mark="yes">
+         <img src="" alt="" width="19px" height="19px" style="font-size:15px;">桂公网安备 32072212344321号</a>
+    </span>
+</div>
+
+
+<div class="github-badge-big">
+    <span class="badge-subject"><i class="fa fa-copyright" aria-hidden="true"></i>版本所有 ©2024 Alan Kevin</span>
+    </span>
+    </script>
+</div>
+
+<!-- 运行时间 -->
+<div class="github-badge-big">
+    <span class="badge-subject"><i class="fa fa-clock-o" style="background-color: blue;"></i>创立时间</span><span
+        class="badge-value bg-apricots"><span id="blog_running_days" class="odometer odometer-auto-theme"></span>
+        天
+        <span id="blog_running_hours" class="odometer odometer-auto-theme"></span> 时
+        <span id="blog_running_mins" class="odometer odometer-auto-theme"></span> 分
+        <span id="blog_running_secs" class="odometer odometer-auto-theme"></span>秒
+    </span>
+
+
+    <script no-pjax="">
+        var blog_running_days = document.getElementById("blog_running_days");
+        var blog_running_hours = document.getElementById("blog_running_hours");
+        var blog_running_mins = document.getElementById("blog_running_mins");
+        var blog_running_secs = document.getElementById("blog_running_secs");
+        function refresh_blog_running_time() {
+        var time = new Date() - new Date(2022, 5, 31, 0, 0, 0); /*此处日期的月份改为自己真正月份的前一个月*/
+        var d = parseInt(time / 24 / 60 / 60 / 1000);
+        var h = parseInt((time % (24 * 60 * 60 * 1000)) / 60 / 60 / 1000);
+        var m = parseInt((time % (60 * 60 * 1000)) / 60 / 1000);
+        var s = parseInt((time % (60 * 1000)) / 1000);
+        blog_running_days.innerHTML = d;
+        blog_running_hours.innerHTML = h;
+        blog_running_mins.innerHTML = m;
+        blog_running_secs.innerHTML = s;
+        }
+        refresh_blog_running_time();
+        if (typeof bottomTimeIntervalHasSet == "undefined") {
+        var bottomTimeIntervalHasSet = true;
+        setInterval(function () {
+        refresh_blog_running_time();
+        }, 500);
+        }
+        </script>

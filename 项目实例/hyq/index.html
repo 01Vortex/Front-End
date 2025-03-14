@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel='stylesheet' href='css/bootstrap.min.css'>
+    <link rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="static/css/style1.css">
+    <link rel="stylesheet" href="./static/css/my.css">
+    <link rel="stylesheet" id='font-awesome-css'
+        href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css" type='text/css' media='all'>
+    <script>
+        //判断客户端设备，选择写入meta
+        function init_viewport() {
+            if (navigator.userAgent.indexOf('Android') != -1) {
+                var version = parseFloat(RegExp.$1);
+                if (version > 2.3) {
+                    var width = window.outerWidth == 0 ? window.screen.width : window.outerWidth;
+                    var phoneScale = parseInt(width) / 500;
+                    document.write('<meta name="viewport" content="width=500, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+                } else {
+                    document.write('<meta name="viewport" content="width=500, target-densitydpi=device-dpi, user-scalable=0">');
+                }
+            } else if (navigator.userAgent.indexOf('iPhone') != -1) {
+                var phoneScale = parseInt(window.screen.width) / 500;
+                document.write('<meta name="viewport" content="width=500, min-height=750, initial-scale=' + phoneScale + ', maximum-scale=' + phoneScale + ', user-scalable=0" /> '); //0.75   0.82
+            } else {
+                document.write('<meta name="viewport" content="width=500, height=750, initial-scale=0.64" /> '); //0.75  0.82
+            }
+        }
+        init_viewport();
+    </script>
+    <title>小孩哥黄雅琦专属站点</title>
+    <style type="text/css">
+        #contentToWrite {
+            top: 46%;
+            width: 80%;
+            font-size: 26px;
+            text-align: center;
+            color: pink;
+            z-index: 9999;
+            overflow: auto;
+            height: 100%;
+            overflow-x: hidden;
+            padding-bottom: 50px;
+            padding-right: 70px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 内容 -->
+    <div id="contentToWrite" class="comments" style="color: rgb(224, 63, 173);padding-right: 19px;">
+        
+        祝愿小孩哥黄雅琦
+        <br>天天开心
+        <br>永远漂亮光芒万丈
+    </div>
+
+
+
+
+
+    <div id="tsparticles"></div>
+    <script src='js/tsparticles.min.js'></script>
+    <script src="js/script.js"></script>
+
+
+    <canvas id="pinkboard" width="1920" height="947"></canvas>
+    <!-- <canvas id="canvas" width="1920" height="947"></canvas> -->
+    <script src="static/js/jquery.min.js"></script>
+    <script type="text/javascript">
+        var id = "776";
+        var data_type = "0";
+        var vip_type = "0";
+        var temp_id = "2";
+    </script>
+    <script src="static/js/main.js"></script>
+
+
+    <!--音乐播放器放页角-->
+    <script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+    <script id="xplayer" src="https://music.lolimi.cn/Static/player/player.js" key="65d39572ad8eb" m="1"></script>
+</body>
+
+</html>
